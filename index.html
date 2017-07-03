@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>生活黄页</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="./src/assets/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+    <script>
+		// 标准参考对象
+		var vW = 375;
+		// 标准参考html大小
+		var vfontSize = 16;
+
+		// 通过js动态的改变html元素的font-size
+		var html = document.documentElement;
+		// .style.fontSize = '17.664px';
+
+		// 根据当前屏幕可视窗口 / 标准参考的屏幕可视窗口的值 = newFontSize / 16
+		var newFontSize = html.clientWidth*vfontSize/vW
+		// console.log(newFontSize);
+		// 给html的font-size赋值
+		html.style.fontSize = newFontSize+'px';
+	 
+	</script>
+
+  </body>
+</html>
